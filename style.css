@@ -161,3 +161,40 @@ footer {
   background-color: var(--x8192-bg);
   color: var(--text3);
 }
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background-color: var(--background);
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  border: 6px solid var(--border);
+}
+
+.modal-content h2 {
+  font-size: 48px;
+  margin: 0 0 20px 0;
+  color: var(--text);
+}
+
+.modal-content p {
+  font-size: 24px;
+  margin: 0 0 20px 0;
+  color: var(--text2);
+}

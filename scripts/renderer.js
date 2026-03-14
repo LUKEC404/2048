@@ -1,10 +1,12 @@
 const Renderer = {
     boardElement: null,
     scoreElement: null,
+    highScoreElement: null,
 
     init() {
         this.boardElement = document.getElementById("board");
         this.scoreElement = document.getElementById("score");
+        this.highScoreElement = document.getElementById("highscore");
     },
 
     clearBoard() {
@@ -49,12 +51,18 @@ const Renderer = {
         this.scoreElement.innerText = score;
     },
 
-    showGameOver() {
-        setTimeout(() => {
-            let restart = confirm("Game Over! Play again?");
-            if (restart) {
-                window.location.reload();
-            }
-        }, 100);
+    updateHighScore(score) {
+        if (this.highScoreElement) {
+            this.highScoreElement.innerText = score;
+        }
+    },
+
+    showGameOver(score) {
+        document.getElementById("final-score").innerText = score;
+        document.getElementById("game-over").classList.remove("hidden");
+    },
+
+    hideGameOver() {
+        document.getElementById("game-over").classList.add("hidden");
     }
 };

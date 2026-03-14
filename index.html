@@ -18,8 +18,19 @@
     <h1 class="title">2048</h1>
     <hr>
     <h2>Score <span id="score">0</span></h2>
+    <h3>Best <span id="highscore">0</span></h3>
     <div id="board"></div>
+    <div id="game-over" class="modal hidden">
+        <div class="modal-content">
+            <h2>Game Over!</h2>
+            <p>Score: <span id="final-score">0</span></p>
+            <button id="TryAgainButton" class="toggle-button">Try Again</button>
+        </div>
+    </div>
     <footer>
+        <button id="ResetButton" class="toggle-button">
+            <i class="fas fa-redo"></i> New Game
+        </button>
         <button id="DarkModeButton" class="toggle-button">
             <i id="icon" class="fas fa-sun"></i>
         </button>

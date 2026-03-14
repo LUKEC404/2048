@@ -16,6 +16,12 @@ const Game = {
         this.hasChanged = false;
     },
 
+    loadBoard(board, score) {
+        this.board = board;
+        this.score = score;
+        this.hasChanged = false;
+    },
+
     getBoard() {
         return this.board.map(row => [...row]);
     },
